@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:note_app/components/Custom_note_item.dart';
 import 'package:note_app/components/Custom_search_icon.dart';
 
 class NotesViewbody extends StatelessWidget {
@@ -7,7 +8,7 @@ class NotesViewbody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 8.0,vertical: 8),
+      padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 8),
       child: Column(
         children: [
           Padding(
@@ -16,12 +17,20 @@ class NotesViewbody extends StatelessWidget {
               children: [
                 Text(
                   "Notes",
-                  style: TextStyle(
-                    fontSize: 24,
-                  ),
+                  style: TextStyle(fontSize: 24),
                 ),
                 Spacer(),
                 CustomSearchIcon(),
+              ],
+            ),
+          ),
+          SizedBox(height: 16), // تباعد بسيط
+          Expanded( // ⬅️ هذا يجعل الملاحظات تأخذ المساحة المتبقية فقط
+            child: ListView(
+              children: [
+                CustomNoteItem(),
+                CustomNoteItem(),
+                CustomNoteItem(),
               ],
             ),
           ),
