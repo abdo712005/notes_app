@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:note_app/components/Custom_note_item.dart';
 import 'package:note_app/components/Custom_search_icon.dart';
+import 'package:note_app/components/Notes_listview.dart';
 
 class NotesViewbody extends StatelessWidget {
   const NotesViewbody({super.key});
@@ -24,19 +24,14 @@ class NotesViewbody extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(height: 16), // تباعد بسيط
-          Expanded( // ⬅️ هذا يجعل الملاحظات تأخذ المساحة المتبقية فقط
-            child: ListView(
-              children: [
-                CustomNoteItem(),
-                CustomNoteItem(),
-                CustomNoteItem(),
-              ],
-            ),
+           
+          Expanded( 
+            child: Noteslistview(),
+              
+            
           ),
         ],
       ),
     );
   }
 }
-
