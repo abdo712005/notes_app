@@ -20,7 +20,9 @@ class NotesViewbody extends StatelessWidget {
                   style: TextStyle(fontSize: 24),
                 ),
                 Spacer(),
-                CustomSearchIcon(),
+                CustomSearchIcon(
+                  icon: Icon(Icons.search),
+                ),
               ],
             ),
           ),
