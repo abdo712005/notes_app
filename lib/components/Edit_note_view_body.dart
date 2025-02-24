@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:note_app/components/Custom_search_icon.dart';
+import 'package:note_app/components/Custom_text_field.dart';
 
 class EditNoteViewBody extends StatelessWidget {
   const EditNoteViewBody({super.key});
@@ -25,7 +26,20 @@ class EditNoteViewBody extends StatelessWidget {
                 
               ],
             ),
+
           ),
+          SizedBox(
+            height: 30,
+          ),
+          CustomTextField(title: "title",
+          ),
+          SizedBox(
+            height: 30,
+          ),
+          CustomTextField(title:"content",
+          maxlins: 5,
+           ),
+
            
          
         ],
