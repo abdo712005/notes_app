@@ -1,6 +1,7 @@
 // ignore_for_file: use_key_in_widget_constructors
 
 import 'package:flutter/material.dart';
+import 'package:note_app/views/Edit_Note_view.dart';
 import 'package:note_app/views/notes_view.dart';
 
 void main() {
@@ -16,6 +17,7 @@ class Notesapp extends StatelessWidget {
 
       routes: {
         NotesView.id : (context)=> NotesView(),
+        EditNoteView.id : (context)=> EditNoteView(),
 
       },
         initialRoute:NotesView.id,
